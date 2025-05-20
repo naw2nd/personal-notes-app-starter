@@ -1,6 +1,4 @@
-import React from "react";
 import PropType from "prop-types";
-import { FiDelete } from "react-icons/fi";
 
 function DeleteButton({ id, onDelete }) {
   return (

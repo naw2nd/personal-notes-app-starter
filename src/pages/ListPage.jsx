@@ -1,5 +1,6 @@
 import React from "react";
 import NoteList from "../components/NoteList";
+import PropTypes from "prop-types";
 import { useSearchParams } from "react-router-dom";
 import { getAllNotes, deleteNote } from "../utils/local-data";
 import SearchBar from "../components/SearchBar";
@@ -74,5 +75,10 @@ class ListPage extends React.Component {
     );
   }
 }
+
+ListPage.propTypes = {
+  defaultKeyword: PropTypes.string,
+  keywordChange: PropTypes.func.isRequired
+};
 
 export default ListPageWrapper;

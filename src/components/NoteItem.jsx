@@ -1,4 +1,3 @@
-import React from "react";
 import PropType from "prop-types";
 import { Link } from "react-router-dom";
 import DeleteButton from "./DeleteButton";
@@ -26,6 +25,7 @@ NoteItem.propType = {
   title: PropType.string.isRequired,
   body: PropType.string.isRequired,
   createdAt: PropType.instanceOf(Date).isRequired,
+  onDelete: PropTypes.func.isRequired
 };
 
 export default NoteItem;
