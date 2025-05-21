@@ -1,4 +1,4 @@
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 function DeleteButton({ id, onDelete }) {
   return (
@@ -8,9 +8,9 @@ function DeleteButton({ id, onDelete }) {
   );
 }
 
-DeleteButton.propType = {
-  id: PropType.string.isRequired,
-  onDelete: PropType.func.isRequired,
+DeleteButton.propTypes = {
+  id: PropTypes.string.isRequired,
+  onDelete: PropTypes.func.isRequired,
 };
 
 export default DeleteButton;

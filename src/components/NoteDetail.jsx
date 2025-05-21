@@ -1,5 +1,4 @@
-import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 function NoteDetail({ id, title, body, createdAt, archived }) {
   return (
@@ -16,12 +15,12 @@ function NoteDetail({ id, title, body, createdAt, archived }) {
   );
 }
 
-NoteDetail.propType = {
-  id: PropType.string.isRequired,
-  title: PropType.string.isRequired,
-  body: PropType.string.isRequired,
-  createdAt: PropType.instanceOf(Date).isRequired,
-  archived: PropType.bool.isRequired,
+NoteDetail.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  createdAt: PropTypes.instanceOf(Date).isRequired,
+  archived: PropTypes.bool.isRequired,
 };
 
 export default NoteDetail;

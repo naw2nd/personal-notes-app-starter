@@ -1,4 +1,4 @@
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import DeleteButton from "./DeleteButton";
 
@@ -21,10 +21,10 @@ function NoteItem({ id, title, body, createdAt, onDelete }) {
 }
 
 NoteItem.propType = {
-  id: PropType.string.isRequired,
-  title: PropType.string.isRequired,
-  body: PropType.string.isRequired,
-  createdAt: PropType.instanceOf(Date).isRequired,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  createdAt: PropTypes.instanceOf(Date).isRequired,
   onDelete: PropTypes.func.isRequired
 };
 
