@@ -10,15 +10,16 @@ function App() {
     <div className="note-app">
       <header className="note-app__header">
         <h1>Aplikasi Catatan</h1>
-        <Link to="/new" style={{ textDecoration: "none", color: "black" }}>
+        <Link to="/notes/new" style={{ textDecoration: "none", color: "black" }}>
           <p>Tambah Catatan</p>
         </Link>
       </header>
       <main>
         <Routes>
           <Route path="/" element={<ListPageWrapper />} />
-          <Route path="/:id" element={<DetailPageWrapper />} />
-          <Route path="/new" element={<AddNewPage />} />
+          <Route path="/notes/:id" element={<DetailPageWrapper />} />
+          <Route path="/notes/new" element={<AddNewPage />} />
+          <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </main>
     </div>

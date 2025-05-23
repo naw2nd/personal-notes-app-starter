@@ -10,8 +10,8 @@ function NoteItem({ id, title, body, createdAt, onDelete }) {
         <em>Dibuat pada: {createdAt}</em>
       </p>
       <p>{body}</p>
-      <Link to={`/${id}`} style={{ textDecoration: "none", color: "black" }}>
-        <button className="contact-item__delete" onClick={() => onDelete(id)}>
+      <Link to={`/notes/${id}`} style={{ textDecoration: "none", color: "black" }}>
+        <button>
           Detail
         </button>
       </Link>
@@ -20,7 +20,7 @@ function NoteItem({ id, title, body, createdAt, onDelete }) {
   );
 }
 
-NoteItem.propType = {
+NoteItem.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
